@@ -16,7 +16,7 @@ body {
 header {
     margin: inherit;
     font-weight: 100;
-    text-align: center; 
+    text-align: center;
     position: relative;
 }
 
@@ -41,7 +41,7 @@ header {
     position: relative;
     top: 20%;
     margin: auto;
-    
+
 }
 .project h1 {
     display: inline-block;
@@ -53,7 +53,7 @@ header {
     align-content: center;
     text-align: left;
     font-size: 12pt;
-    
+
 }
 footer {
     color: #fff;
@@ -62,13 +62,13 @@ footer {
     min-width: 35%;
     position: relative;
     margin: auto;
-    
+
 }
 footer p {
     line-height: 1.5em;
     font-size: 10pt;
     top: 13px;
-     
+
 }
 footer a:link, a:active, a:visited {
     text-decoration: none;
@@ -80,15 +80,15 @@ footer a:hover {
 
 
 .pointer{
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
 	border-top: 26px solid rgb(255, 255, 255);
 	position:fixed;
 	bottom:25px;
 	right:25px;
-} 
+}
 .pointer {
     animation: spin 3000ms linear;
     animation-iteration-count: infinite;
@@ -102,7 +102,7 @@ footer a:hover {
 }   to {
         transform: rotate(360deg);
     }
-    
+
 }
 @-webkit-keyframes spin {
     from {
@@ -131,33 +131,39 @@ footer a:hover {
 @keyframes blink {
     to {opacity: .0;}
 }
+/* typewriter Animation */
+.typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             /* blinkTextCursor 500ms steps(44) infinite normal; */
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+/*@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}*/
 
 .block-2 {
     background-color: #FFCC67;
     font-size: 4em;
     height: 100vh;
+    text-transform: none;
 }
 
-.bk-2-inner {
+.block-2 p {
     color: #bc780c;
     position: relative;
     top: 40%;
     margin: auto;
-}
-.block-2 .p1 {
-    text-transform: none;
-
-}
-
-.block-2 .p2 {
-    font-style: italic;
 }
 
 .block-2 span {
     font-family: "playfair display";
     font-weight: 400;
     font-style: italic;
-    font-size: 1em;  
+    font-size: 1em;
     animation: pulse 2s infinite;
     -webkit-animation: pulse 2s infinite;
 }
@@ -172,7 +178,7 @@ footer a:hover {
  }
  50% {
     transform: scale(1);
-    opacity: .50;
+    opacity: 0.50;
  }
  75% {
     transform: scale(1);
@@ -186,15 +192,15 @@ footer a:hover {
 @-webkit-keyframes "pulse" {
  0% {
     -webkit-transform: scale(1);
-    opacity: 0.25;
+    opacity: 0.0;
  }
  25% {
     -webkit-transform: scale(1);
-    opacity: 0.5;
+    opacity: 0.25;
  }
  50% {
     -webkit-transform: scale(1);
-    opacity: 1.0;
+    opacity: 0.50;
  }
  75% {
     -webkit-transform: scale(1);
@@ -202,13 +208,30 @@ footer a:hover {
  }
  100% {
     -webkit-transform: scale(1);
-    opacity: 0.0;
+    opacity: 1.0;
  }
 }
+
+.block-2.2 {
+    background-color: #333333;
+    height: 100vh;
+}
+
+.block-2.2 span {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.block-2.2:hover span {
+    font-family: cursive;
+}
+
+
 .block-3 {
     background-color: #E7F6FD;
     height: 100vh;
-    
+
 }
 
 .block-3 p {
@@ -240,7 +263,7 @@ footer a:hover {
     opacity: 1.0;
     transition: opacity .7s ease-in-out .7s ;
     -webkit-transition: opacity .7s ease-in-out .7s ;
-    border-bottom: none; 
+    border-bottom: none;
 }
 
 .block-5 {
@@ -261,7 +284,7 @@ footer a:hover {
     font-size: 1em;
 }
 
-.block-5 span:before{
+.block-5 span:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -315,9 +338,54 @@ footer a:hover {
 }
 
 .block-6:hover .p2 {
-	opacity: 1.0;
+	/* opacity: 1.0;
 	transition: opacity .3s ease-in-out 0s ;
 	-webkit-transition: opacity .3s ease-in-out 0s ;
-    border-bottom:none;
+    border-bottom:none; */
+  animation: vacant 1s infinite;
+  -webkit-animation: vacant 1s infinite;
 }
-
+@keyframes "vacant" {
+ 0% {
+    transform: scale(1);
+    opacity: 0.0;
+ }
+ 25% {
+    transform: scale(1);
+    opacity: 0.50;
+ }
+ 50% {
+    transform: scale(1);
+    opacity: 0.0;
+ }
+ 75% {
+    transform: scale(1);
+    opacity: 0.75;
+ }
+ 100% {
+    transform: scale(1);
+    opacity: 1.0;
+ }
+}
+@-webkit-keyframes "vacant" {
+ 0% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(1);
+    opacity: 0.5;
+ }
+ 50% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+ 75% {
+    -webkit-transform: scale(1);
+    opacity: 0.75;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 1.0;
+ }
+}
