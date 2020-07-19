@@ -7,10 +7,12 @@
     <link rel="stylesheet" type="text/css" href="listen.css" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900|Playfair+Display:900,400italic' rel='stylesheet' type='text/css'>
     <title>Are you Listening?</title>
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-    <script src="jquery.panelSnap.js"></script>
-       <!-- Google Analytics--> <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.panelSnap.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script> -->
+
+       <!-- Google Analytics
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -19,35 +21,65 @@
   ga('create', 'UA-61125731-2', 'auto');
   ga('send', 'pageview');
 
-</script>
+    </script> -->
+
+    <!-- <script>
+        jQuery(function($) {
+            var options = {
+              $menu: false,
+              menuSelector: 'a',
+              panelSelector: 'section',
+              namespace: '.panelSnap',
+              onSnapStart: function(){},
+              onSnapFinish: function(){},
+              onActivate: function(){},
+              directionThreshold: 50,
+              slideSpeed: 200,
+              keyboardNavigation: {
+                enabled: true,
+                nextPanelKey: 40,
+                previousPanelKey: 38,
+                wrapAround: true
+              }
+            };
+
+            $('.panel_container').panelSnap(options);
+          });
+        </script> -->
 </head>
 <body>
    <!-- <header>
         <div class="menu">
-            <a href="/first" data-panel="first">1</a>
-            <a href="/second" data-panel="second">2</a>
-            <a href="/third" data-panel="thrid">3</a>
-            <a href="/fourth" data-panel="fourth">4</a>
-            <a href="/fifth" data-panel="fifth">5</a>
-            <a href="/sixth" data-panel="sixth">6</a>
+            <a href="/first" data-panel="first">—</a>
+            <a href="/second" data-panel="second">—</a>
+            <a href="/third" data-panel="thrid">—</a>
+            <a href="/fourth" data-panel="fourth">—</a>
+            <a href="/fifth" data-panel="fifth">—</a>
+            <a href="/sixth" data-panel="sixth">—</a>
         </div>
-    </header>  -->
+    </header> -->
 
-    <div class="outer-container">
-
-        <!-- containing blocks -->
-        <section class="full block block-1" data-panel="first"><p class="typewriter">sometimes...<span>|</span></p></section>
+        <!-- section blocks -->
+        <section class="full block block-1" data-panel="first"><p class="typewriter">sometimes...</p></section>
         <section class="full block block-2" data-panel="second"><p>It <span>feels</span> like</p></section>
-        <section class="full block block-2.2" data-panel="second-follow"><p>you never <span>really</span></p></section>
-        <section class="full block block-3" data-panel="thrid"><p>listen</p></section>
-        <section class="full block block-4" data-panel="fourth"><p>to me</p></section>
+        <section class="full block block-3" data-panel="thrid"><p>you never really</p></section>
+        <section class="full block block-4" data-panel="fourth"><p class="p1">listen <p class="p2">to me</p></p></section>
         <section class="full block block-5" data-panel="fifth"><p>I <span>know</span> you can hear me</p></section>
-        <section class="full block block-6" data-panel="sixth"><div class="bk-6-inner"><p class="p1">but are you</p><p class="p2">there<span>?</span></p></div></section>
-    </div>
+        <section class="full block block-6" data-panel="sixth"><p class="p1">but are you</p><p class="p2"><span>there?</span></p></section>
      <footer>
          <a href="about.html"><div class="pointer"></div></a>
         </footer>
+<script>
+  var defaultOptions = {
+    container: document.body,
+    panelSelector: '> section',
+    directionThreshold: 50,
+    delay: 0,
+    duration: 300,
+    easing: function(t) { return t },
+  };
 
-
+  new PanelSnap(options);
+</script>
 </body>
 </html>
