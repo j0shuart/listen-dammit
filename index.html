@@ -6,9 +6,12 @@
     <link rel="stylesheet" type="text/css" href="normalize.css"/>
     <link rel="stylesheet" type="text/css" href="listen.css" />
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,900|Playfair+Display:900,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
     <title>Are you Listening?</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="jquery.panelSnap.js"></script>
+    <script src="panelsnap.js"></script>
+
+    </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script> -->
 
        <!-- Google Analytics
@@ -22,7 +25,12 @@
   ga('send', 'pageview');
 
     </script> -->
+    <script defer> <!-- supposed to bind PanelSnap to body -->
 
+    jQuery(function () {
+       new PanelSnap();
+    })
+    </script>
     <!-- <script>
         jQuery(function($) {
             var options = {
@@ -69,17 +77,5 @@
      <footer>
          <a href="about.html"><div class="pointer"></div></a>
         </footer>
-<script>
-  var defaultOptions = {
-    container: document.body,
-    panelSelector: '> section',
-    directionThreshold: 50,
-    delay: 0,
-    duration: 300,
-    easing: function(t) { return t },
-  };
-
-  new PanelSnap(options);
-</script>
 </body>
 </html>
